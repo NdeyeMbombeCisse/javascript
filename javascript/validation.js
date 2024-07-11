@@ -72,9 +72,11 @@ formulaire.addEventListener('submit', function(e) {
         emailError.innerHTML = ""; // Effacer le message d'erreur si la validation passe
     }
 
+
+
     if (valid) {
-        document.getElementById('submit_btn').classList.remove('hidden');
-        alert("Formulaire rempli avec succès !");
+        document.getElementById('mon_formulaire').classList.add('hidden');
+        document.getElementById('success_message').classList.remove('hidden');
     }
 });
 
