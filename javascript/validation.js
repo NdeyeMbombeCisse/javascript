@@ -73,10 +73,20 @@ formulaire.addEventListener('submit', function(e) {
     }
 
 
-
     if (valid) {
         document.getElementById('mon_formulaire').classList.add('hidden');
-        document.getElementById('success_message').classList.remove('hidden');
+        let message = document.getElementById('success_message').classList.remove('hidden');
+
+        setTimeout(function() {
+            document.getElementById('mon_formulaire').classList.remove('hidden'); // Réafficher le formulaire
+            document.getElementById('success_message').classList.add('hidden');
+            resetForm(); // Appeler la fonction pour réinitialiser le formulaire
+        }, 1000);
+
+
+
     }
+
 });
+
 
